@@ -13,6 +13,8 @@ const mongoose = require("mongoose");
 //import routes
 //disni
 const user = require("./Routes/userRoutes");
+//ramona
+const trips = require("./Routes/TripRoutes");
 
 //invoke app
 const app = express();
@@ -36,6 +38,9 @@ dotenv.config();
 //use server to communicate with routes
 //disni
 app.use("/user", user);
+
+//ramona
+app.use(trips);
 
 
 //connect the app with mongo db with mongoose
