@@ -47,9 +47,9 @@ const Navbar = () => {
                   }}
                   className="sidebarListItem"
                   aria-current="page"
-                  href="/SubmitAppointment"
+                  href="/AddTrip"
                 >
-                  Appointments
+                  Reserve Seats For Journeys
                 </a>
                 <a
                   style={{
@@ -77,14 +77,14 @@ const Navbar = () => {
                 {/*  admin Pages */}
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/AvailableFuel"
+                  href="/AddTrip"
                   aria-current="page"
                 >
-                  Fuel Information
+                  
                 </a>
                 <a
                   style={{

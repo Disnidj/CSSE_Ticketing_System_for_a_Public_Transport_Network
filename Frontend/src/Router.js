@@ -14,7 +14,7 @@ import Dashboard from "./components/Dashboard";
 import ViewAllRoles from "./components/admin/ViewAllRoles";
 import UpdateUser from "./components/admin/UpdateUser";
 
-
+import AddTrip from "./components/customer/AddTrip";
 
 
 
@@ -46,7 +46,7 @@ export default function Router() {
 
         
           {/* admin */}
-
+          <Route path="/AddTrip" element={<AddTrip />} />
           <Route exact path="/ViewAllRoles" element={<ViewAllRoles />} />
           <Route exact path="/updateUser/:id" element={<UpdateUser />} />
           

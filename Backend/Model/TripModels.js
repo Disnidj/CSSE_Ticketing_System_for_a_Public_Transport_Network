@@ -28,6 +28,10 @@ const TripSchema = new mongoose.Schema({
     Fare:{
         type:String,
         require:true
+    },
+    Name:{
+        type:String,
+        require:true
     }
 })
 
