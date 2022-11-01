@@ -85,6 +85,7 @@ function AddTrip() {
         setDestination("");
         setBusType("");
         setFare("");
+        setName("");
         
       }; 
   
@@ -93,7 +94,7 @@ function AddTrip() {
           e.preventDefault();
 
    
-    if(Date===''|| Time===''|| StartPlace===''||Destination===''|| BusType===''||Fare===''){
+    if(Date===''|| Time===''|| StartPlace===''||Destination===''|| BusType===''||Fare===''||Name===''){
         alert("Fill All The Details!!")
 
     }else {
@@ -104,7 +105,8 @@ function AddTrip() {
           StartPlace:StartPlace,
           Destination:Destination,
           BusType:BusType,
-          Fare:Fare
+          Fare:Fare,
+          Name:Name
           }
 
       console.log("Sending Details...",newData);
@@ -115,7 +117,8 @@ function AddTrip() {
         StartPlace:StartPlace,
         Destination:Destination,
         BusType:BusType,
-        Fare:Fare
+        Fare:Fare,
+        Name:Name
       });
 
       
@@ -327,10 +330,10 @@ function AddTrip() {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                            <button className="btn btn-primary" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginTop:'28px'}}>
-                            <a href="/ViewAllFuel"
+                            <button onClick={(e)=>ChangeOnClick(e)} className="btn btn-primary" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginTop:'28px'}}>
+                            <a href="#"
                             style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
-                            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;View Details&nbsp;&nbsp;</a>
+                            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;</a>
                             </button>
 
 

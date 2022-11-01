@@ -81,10 +81,10 @@ const Navbar = () => {
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/AddTrip"
+                  href="/ViewAllTrips"
                   aria-current="page"
                 >
-                  
+                  Pay Station
                 </a>
                 <a
                   style={{
