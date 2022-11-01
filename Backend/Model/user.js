@@ -32,6 +32,11 @@ const UserSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now,
 	},
+
+	Balance:{
+		type:Number,
+		
+	},
 });
 
 module.exports = User = mongoose.model("user", UserSchema);
