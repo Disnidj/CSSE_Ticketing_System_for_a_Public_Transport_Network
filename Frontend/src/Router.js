@@ -13,8 +13,11 @@ import Dashboard from "./components/Dashboard";
 //admin
 import ViewAllRoles from "./components/admin/ViewAllRoles";
 import UpdateUser from "./components/admin/UpdateUser";
-
+import ViewAllTrips from "./components/admin/ViewAllTrips";
+//cus
 import AddTrip from "./components/customer/AddTrip";
+import EditTrip from "./components/customer/EditTrip";
+
 
 
 
@@ -45,10 +48,15 @@ export default function Router() {
           <Route exact path="/staffRegister" element={<RegisterStaff />} />
 
         
-          {/* admin */}
+          
           <Route path="/AddTrip" element={<AddTrip />} />
+          <Route path="/:id" element={<EditTrip />} />
+
+          {/* admin */}
           <Route exact path="/ViewAllRoles" element={<ViewAllRoles />} />
           <Route exact path="/updateUser/:id" element={<UpdateUser />} />
+          <Route path="/ViewAllTrips" element={<ViewAllTrips />} />
+
           
         </Routes>
         <Footer />
