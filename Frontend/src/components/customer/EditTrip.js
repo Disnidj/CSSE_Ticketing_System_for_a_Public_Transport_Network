@@ -2,12 +2,27 @@ import React  from 'react';
 import {useState ,useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-// import grp from '../../img/ram.jpg';
+import grp from '../../img/tik.webp';
 
 function UpdateTrip() {
 
+//pdf generator function
+jsPdfGenarator = ()=>{
+  var doc = new jsPdf('p','pt');
+
+  doc.text(210,30,"Season Card Request")
+  doc.autoTable({html:'#pdf'})
+
+  doc.autoTable({
+    columnStyles:{europe:{halign:'center'}},
+    margin:{top:10},
+  })
 
 
+doc.save("Season_Card.pdf");
+
+
+}
 
   //use state to track state in function components
   const [Date, setDate]=useState("");
@@ -126,7 +141,7 @@ useEffect(function effectFunction() {
         <center>
         <h1 style={{marginTop:'-50px',marginBottom:'3px', backgroundColor:'#04619F', color:'white'}}>Update Details</h1>
         </center>
-        <table  width = "1800" height = "600">
+        <table  width = "1200" height = "500">
             <tr>
               <td>
               <div class="container-fluid bg-3 text-left">

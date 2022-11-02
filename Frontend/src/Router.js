@@ -17,6 +17,8 @@ import ViewAllTrips from "./components/admin/ViewAllTrips";
 //cus
 import AddTrip from "./components/customer/AddTrip";
 import EditTrip from "./components/customer/EditTrip";
+import ViewAll from "./components/customer/ViewAll";
+import GetOne from "./components/customer/ViewOne"
 
 
 
@@ -48,9 +50,10 @@ export default function Router() {
           <Route exact path="/staffRegister" element={<RegisterStaff />} />
 
         
-          
+          <Route path="/viewAll" element={<ViewAll/>} />
           <Route path="/AddTrip" element={<AddTrip />} />
           <Route path="/:id" element={<EditTrip />} />
+          <Route path="/GetOneTrip/:id" element={<GetOne />} />
 
           {/* admin */}
           <Route exact path="/ViewAllRoles" element={<ViewAllRoles />} />
