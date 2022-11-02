@@ -53,6 +53,17 @@ const Navbar = () => {
                   Reserve Seats For Journeys
                 </a>
                
+                <a
+                  style={{
+                    display: userRole == "customer" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  aria-current="page"
+                  href="/C_ViewBusTimeTable"
+                >
+                  Time Tables
+                </a>
                 
 
                 {/*  admin Pages */}
@@ -105,6 +116,30 @@ const Navbar = () => {
                   href="/staffRegister"
                 >
                   Employee Registration
+                </a>
+
+                <a
+                  style={{
+                    display: userRole == "admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  aria-current="page"
+                  href="/ViewAllTimeTable"
+                >
+                Bus Time Tables
+                </a>
+
+                <a
+                  style={{
+                    display: userRole == "admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  aria-current="page"
+                  href="/ViewAllAppoints"
+                >
+                Appoint Drivers
                 </a>
                 
 
@@ -163,6 +198,18 @@ const Navbar = () => {
                   aria-current="page"
                 >
                   View All Leaves
+                </a>
+
+                <a
+                  style={{
+                    display: userRole == "Employee" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/D_ViewAllAppoints"
+                  aria-current="page"
+                >
+                  View All Appoints
                 </a>
               </div>
             </div>
