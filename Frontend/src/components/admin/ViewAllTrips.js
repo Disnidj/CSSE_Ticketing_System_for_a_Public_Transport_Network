@@ -17,7 +17,7 @@ export default class AdminViewAllTrips extends Component {
         super(props);
         this.state={
         //initializing an array 
-        GetAllFuel:[]
+        GetAllTrips:[]
         };
         
     }
@@ -54,7 +54,7 @@ export default class AdminViewAllTrips extends Component {
         //if the request success, store the data to the array 
         if(res.data.success){
             this.setState({
-                GetAllFuel:res.data.existingData
+                GetAllTrips:res.data.existingData
             });
                 
                 
@@ -75,15 +75,15 @@ export default class AdminViewAllTrips extends Component {
 //search data according to the shift and date
         
         
-filterData(GetAllFuel,searchKey){
+filterData(GetAllTrips,searchKey){
 
   
-    const result =GetAllFuel.filter((FuelData)=>
+    const result =GetAllTrips.filter((FuelData)=>
    
     FuelData.Name.includes(searchKey)
     )
   
-  this.setState({GetAllFuel:result})
+  this.setState({GetAllTrips:result})
   
   }
   
@@ -127,7 +127,7 @@ filterData(GetAllFuel,searchKey){
             
             &nbsp;<button className="btn btn-success" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
                               marginLeft:'900px', width:'300px', height:'80px', marginTop:'-100px'}} >
-                              <i class="fa-solid fa-download"></i>&nbsp;Generate Passengers List
+                              <i class="fa-solid fa-download"></i>&nbsp;Generate Requests List
             </button>
 
 
@@ -156,19 +156,19 @@ filterData(GetAllFuel,searchKey){
           
           <tbody>
 
-            {this.state.GetAllFuel.map((GetAllFuel,index)=>(
+            {this.state.GetAllTrips.map((GetAllTrips,index)=>(
             <tr key ={index}>
               <th scope='row'>{index+1}</th>
-              <td>{GetAllFuel.Date}</td>
-              <td>{GetAllFuel.Time}</td>
-              <td>{GetAllFuel.StartPlace}</td>
-              <td>{GetAllFuel.Destination}</td> 
-              <td>{GetAllFuel.BusType}</td> 
-              <td>{GetAllFuel.Fare}</td>
-              <td>{GetAllFuel.Name}</td>
+              <td>{GetAllTrips.Date}</td>
+              <td>{GetAllTrips.Time}</td>
+              <td>{GetAllTrips.StartPlace}</td>
+              <td>{GetAllTrips.Destination}</td> 
+              <td>{GetAllTrips.BusType}</td> 
+              <td>{GetAllTrips.Fare}</td>
+              <td>{GetAllTrips.Name}</td>
 
               <td>
-                            <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllFuel._id)}>
+                            <a className ="btn btn-danger" href="" onClick={()=>this.onDelete(GetAllTrips._id)}>
                             <i className ="far fa-trash-alt"> </i>&nbsp;Delete
                             </a>  &nbsp;
 

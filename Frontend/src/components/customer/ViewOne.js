@@ -175,15 +175,10 @@ doc.save("Season_Card_Request.pdf");
                                 {Fare} 
                               
                             </div>
-                            
                           </td>
-                          
                           </tr>
-                          
-
                           <br/>
                           
-
                           <tr>
                           <td colspan="2">
                             <div>
@@ -195,10 +190,6 @@ doc.save("Season_Card_Request.pdf");
                           </td>
                           </tr>
                           
-                          
-                          <tr>
-                           
-                          </tr>
                           <br/><br/>
                         </table> 
 
