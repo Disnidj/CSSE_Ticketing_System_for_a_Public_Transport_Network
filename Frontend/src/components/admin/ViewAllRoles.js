@@ -4,8 +4,7 @@ import { Link , useNavigate } from "react-router-dom";
 import { GetallUsers, DeleteAdmin } from "../../Services/AuthServices";
 import Swal from "sweetalert2";
 
-//import backgroud picture
-import BgAdmin2 from '../../img/BgEmp7.jpeg';
+
 
 const Viewallusers = () => {
 
@@ -24,7 +23,7 @@ const Viewallusers = () => {
         let cusdata =[];
         console.log("All Customers",data?.data);
          data?.data.map((customers)=>{
-            if(customers?.userRole == "Customer")
+            if(customers?.userRole == "customer")
             {
                 cusdata.push(customers);
             }
@@ -110,7 +109,9 @@ const Viewallusers = () => {
                             <th>FullName</th>
                             <th>Email Address</th>
                             <th>Contact Number</th>
+                            <th>NIC</th>
                             <th>User Type</th>
+                            <th>Delete user</th>
 
                           
                             </tr>
@@ -122,13 +123,17 @@ const Viewallusers = () => {
                                     <td>{customers?.name}</td>
                                     <td>{customers?.email}</td>
                                     <td>{customers?.mobileno}</td>
+                                    <td>{customers?.NIC}</td>
                                     <td>{customers?.userRole}</td>
 
 
        
-
+                                    {<td>  <a className="btn btn-primary" style = {{textDecoration:'none',color:'white'}} onClick={() => deleteRowData(customers?._id)} >
+                               &nbsp;Delete
+                                </a></td> }
                                 </tr>
                             ))}
+                           
                         </tbody>
                     </table>
                 </div>

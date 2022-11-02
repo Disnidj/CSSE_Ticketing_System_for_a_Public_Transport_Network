@@ -23,23 +23,24 @@ const Navbar = () => {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Home
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
+
                 {/* customer pages */}
+
+                <a
+                  style={{
+                    display: userRole == "customer" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/dashboard"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+
                 <a
                   style={{
                     display: userRole == "customer" ? "flex" : "none",
@@ -51,17 +52,7 @@ const Navbar = () => {
                 >
                   Reserve Seats For Journeys
                 </a>
-                <a
-                  style={{
-                    display: userRole == "customer" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/FuelSummarry"
-                  aria-current="page"
-                >
-                  Fuel Summarry
-                </a>
+               
                 <a
                   style={{
                     display: userRole == "customer" ? "flex" : "none",
@@ -69,12 +60,26 @@ const Navbar = () => {
                   }}
                   className="sidebarListItem"
                   aria-current="page"
-                  href="/C_ViewTimeTable"
+                  href="/C_ViewBusTimeTable"
                 >
                   Time Tables
                 </a>
+                
 
                 {/*  admin Pages */}
+
+                <a
+                  style={{
+                    display: userRole == "admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/dashboard"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+
                 <a
                   style={{
                     display: userRole == "admin" ? "flex" : "none",
@@ -86,83 +91,57 @@ const Navbar = () => {
                 >
                   Pay Station
                 </a>
+               
+               
+                
+               
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/AddFuel"
-                  aria-current="page"
-                >
-                  Add Fuel Stock
-                </a>
-                <a
-                  style={{
-                    display: userRole == "Admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/AdminViewSalary"
-                  aria-current="page"
-                >
-                  Salary Information
-                </a>
-                <a
-                  style={{
-                    display: userRole == "Admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/Addtimetable"
-                  aria-current="page"
-                >
-                  Add Time Table
-                </a>
-                <a
-                  style={{
-                    display: userRole == "Admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/AdminLeaveViewAll"
-                  aria-current="page"
-                >
-                  View Leaves
-                </a>
-                <a
-                  style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   href="/ViewAllRoles"
                   aria-current="page"
                 >
-                  View Roles
+                  Registered Users
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   aria-current="page"
                   href="/staffRegister"
                 >
-                  Register Employee
+                  Employee Registration
                 </a>
+
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   aria-current="page"
-                  href="/ViewFuelReport"
+                  href="/ViewAllTimeTable"
                 >
-                  Reports
+                Bus Time Tables
                 </a>
+
+                <a
+                  style={{
+                    display: userRole == "admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  aria-current="page"
+                  href="/ViewAllAppoints"
+                >
+                Appoint Drivers
+                </a>
+                
 
                 {/*Employee pages*/}
                 <a
@@ -219,6 +198,18 @@ const Navbar = () => {
                   aria-current="page"
                 >
                   View All Leaves
+                </a>
+
+                <a
+                  style={{
+                    display: userRole == "Employee" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/D_ViewAllAppoints"
+                  aria-current="page"
+                >
+                  View All Appoints
                 </a>
               </div>
             </div>

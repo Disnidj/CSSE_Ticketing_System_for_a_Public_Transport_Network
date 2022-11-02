@@ -53,8 +53,8 @@ const Footer = () => {
 
              
                     <div className="text-center p-3" style={{backgroundcolor:"rgba(0, 0, 0, 0.2)"}}>
-                        © 2020 Copyright:
-                        <a className="text-white" href="">Fuel Station - DRAS</a>
+                        © 2020 Copyright: 
+                        <a className="text-white" href=""> TravelGO</a>
                     </div>
      
                 </footer>

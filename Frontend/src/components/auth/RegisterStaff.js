@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { CreateAdmin } from "../../Services/AuthServices";
 import Swal from 'sweetalert2';
 import { ValidateSignUp } from "./Validation";
-import grp from '../../img/grp.webp';
+import grp from '../../img/grp.jpeg';
 import reg1 from '../../img/grp.jpg';
 
 const RegisterStaff = () => {
@@ -15,12 +15,12 @@ const RegisterStaff = () => {
 		email: "",
 		password: "",
 		password2: "",
-		address:"",
+		NIC:"",
 		mobileno:"+94",
 		userRole:"Employee"
 	});
 
-	const { name, email, password, password2 , address , mobileno } = formData;
+	const { name, email, password, password2 , NIC , mobileno } = formData;
 
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -151,12 +151,12 @@ const RegisterStaff = () => {
             <br/>
 			<div className="Reg" style={{width:'600px', marginLeft:'10px', marginRight:'10px'}}>
               
-            <label className="form-label"><h4>Address : </h4></label>
+            <label className="form-label"><h4>NIC : </h4></label>
                 <input type="text"
 						class="form-control"
-						placeholder="Address"
-						name="address"
-						value={address}
+						placeholder="NIC"
+						name="NIC"
+						value={NIC}
 						onChange={(e) => onChange(e)}
                 
               />
