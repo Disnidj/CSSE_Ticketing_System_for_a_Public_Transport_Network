@@ -16,6 +16,10 @@ const user = require("./Routes/userRoutes");
 //ramona
 const trips = require("./Routes/TripRoutes");
 
+//anodya
+const bustimetable = require("./Routes/BusTimeTableRoutes");
+const AppointDrivers = require("./Routes/AppointDriverRoutes");
+
 //invoke app
 const app = express();
 
@@ -41,6 +45,11 @@ app.use("/user", user);
 
 //ramona
 app.use(trips);
+
+//anodya
+
+app.use(bustimetable);
+app.use(AppointDrivers);
 
 
 //connect the app with mongo db with mongoose
