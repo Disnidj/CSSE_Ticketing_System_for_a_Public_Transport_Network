@@ -72,7 +72,7 @@ console.log(appointdriver);
 
 //update process 
 console.log(id)
-await axios.put(`http://localhost:8000/AppointDriver/update/${id.id}`,appointdriver)
+await axios.put(`http://localhost:5000/AppointDriver/update/${id.id}`,appointdriver)
 .then(res=>{
   console.log("Return Data",res);
   alert("Update Success!!");
@@ -92,7 +92,7 @@ await axios.put(`http://localhost:8000/AppointDriver/update/${id.id}`,appointdri
 useEffect(function effectFunction() {
   console.log("get ID",id);
 
-  axios.get(`http://localhost:8000/AppointDriver/${id.id}`)
+  axios.get(`http://localhost:5000/AppointDriver/${id.id}`)
   .then(res=>{
     console.log("data",res);
     setRouteNo(res.data.appointdriver.RouteNo)
@@ -129,12 +129,12 @@ useEffect(function effectFunction() {
    
 
         
-          <br/><br/>
-        <table   style={{backgroundColor :'black', marginTop:'-30px'}}>
+        <br/><br/>
+        <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-100px'}}>Appointed Drivers - Update</h1>
+        <br/><br/>
+        <table   style={{backgroundColor :'black', marginTop:'-60px'}}>
           <tr>
             <th>
-
-              <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-140px'}}>Appointed Drivers - Update</h1>
               <br/><br/>
     
           <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
@@ -175,7 +175,7 @@ useEffect(function effectFunction() {
                         />
                         </div>
                         </tr>
-                      
+                      <br/>
                        <tr>
                       <td>
                         <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
@@ -190,13 +190,15 @@ useEffect(function effectFunction() {
                         />
                         </div>
                         </td>
+                        </tr>
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         
+                        <tr>
                         <td>
 
-                         <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                         <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                         <label style={{margineBottom:'5px'}}> Driver Name : </label>
                         <input type="text"
                         name="DriverName"
@@ -225,15 +227,15 @@ useEffect(function effectFunction() {
                             />
                          </div>
                         </td>
-
+                      </tr>
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                        
-                       
+                       <tr>
                         <td>
-                         <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                         <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                         <label style={{margineBottom:'5px'}}>  Inspector Name: </label>
                         <input type="text"
                          name="EndInspectorName"

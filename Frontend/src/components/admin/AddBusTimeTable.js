@@ -96,7 +96,7 @@ function AddBusTimeTable() {
         console.log("Sending time table Details...",newData);
   
 
-        let data= await axios.post('http://localhost:8000/BusTimetables/save',{
+        let data= await axios.post('http://localhost:5000/BusTimetables/save',{
             RouteNo:RouteNo,
             RouteName:RouteName,
             DepartureFrom:DepartureFrom,
@@ -139,14 +139,15 @@ function AddBusTimeTable() {
 
             
               <br/><br/>
+              <h1 style={{ textAlign:'center',fontSize:"60px", height:'90px', backgroundColor:"#87ceeb", marginTop:'-100px'}}>Bus Time Table Creation</h1>
             <table   style={{backgroundColor :'black', marginTop:'-30px'}}>
               <tr>
                 <th>
 
-                  <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-140px'}}>Bus Time Table Creation</h1>
+                  
                   <br/><br/>
         
-              <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
+              <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-50px', margineBottom:'200px'}}>
            
               <br/>
                 <table>
@@ -160,6 +161,7 @@ function AddBusTimeTable() {
                               name="RouteNo"
                               value={RouteNo} 
                               onChange={(e) => HandleRouteNo(e)} 
+                              placeholder = "Route No"
                             />
                             </div>
                        
@@ -180,10 +182,11 @@ function AddBusTimeTable() {
                               name = "RouteName"
                               value={RouteName} 
                               onChange={(e) => HandleRouteName(e)} 
+                              placeholder = "Route Name"
                             />
                             </div>
                             </tr>
-                          
+                          <br/>
                            <tr>
                           <td>
                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
@@ -193,25 +196,27 @@ function AddBusTimeTable() {
                             className="form-control"
                             value={DepartureFrom} 
                             onChange={(e) => HandleDepartureFrom(e)}
-                            placeholder="start time"
+                            placeholder="start "
                         
                             />
                             </div>
                             </td>
+                            </tr>
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             
+                            <tr>
                             <td>
 
-                             <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Destination To : </label>
                             <input type="text"
                             name="DestinationTo"
                             className="form-control"
                             value={DestinationTo} 
                             onChange={(e) => HandleDestinationTo(e)}
-                            placeholder="End time"
+                            placeholder="End "
                         
                                 />
                              </div>
@@ -233,15 +238,16 @@ function AddBusTimeTable() {
                                 />
                              </div>
                             </td>
+                            </tr>
 
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                            
-                           
+                           <tr>
                             <td>
-                             <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  End: </label>
                             <input type="time"
                              name="End"
@@ -262,6 +268,7 @@ function AddBusTimeTable() {
                             
                             
                          </tr>
+                 
                         </tbody>
                          </table> 
                          <br/>
@@ -272,11 +279,13 @@ function AddBusTimeTable() {
                          Send Details </button>
                       
                          </form> 
+                         <br/> <br/>
                          </th>
                          <th>
-                         <img src={timetableImage} alt="timetableImage" height={900} width={1260}/>
+                         <img src={timetableImage} alt="timetableImage" height={950} width={1260}/>
                          </th>
                          </tr>
+                      
                          </table>
                       
            

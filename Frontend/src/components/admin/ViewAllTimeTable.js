@@ -16,7 +16,7 @@ export default class ViewAllTimeTable extends Component{
     }
     
     retrieveTimetables(){
-      axios.get("http://localhost:8000/BusTimetables").then(res =>{
+      axios.get("http://localhost:5000/BusTimetables").then(res =>{
         if(res.data.success){
           this.setState({
             bustimetable:res.data.existingBusTimetables
@@ -30,7 +30,7 @@ export default class ViewAllTimeTable extends Component{
     
     onDelete = (id) =>{
     
-      axios.delete(`http://localhost:8000/BusTimetables/delete/${id}`).then((res)=>{
+      axios.delete(`http://localhost:5000/BusTimetables/delete/${id}`).then((res)=>{
           this.retrieveTimetables();
             
       })
@@ -49,7 +49,7 @@ export default class ViewAllTimeTable extends Component{
     handleSearchArea = (e) =>{
       const searchKey = e.currentTarget.value;
     
-      axios.get("http://localhost:8000/BusTimetables").then(res=>{
+      axios.get("http://localhost:5000/BusTimetables").then(res=>{
         if(res.data.success){
           this.filterData(res.data.existingBusTimetables,searchKey)
         }
@@ -95,6 +95,7 @@ export default class ViewAllTimeTable extends Component{
         
        
             <br/>
+        
             <center>
             <table className = "table table-striped" style={{width:'1800px'}}>
                  <thead style={{backgroundColor:'black'}}>
@@ -158,6 +159,9 @@ export default class ViewAllTimeTable extends Component{
         </center>
 
         <br/>
+
+        <button className= "btn btn-info" style={{marginRight:'0px', marginLeft:'140px', blockSize:'70px', width:'200px'}} type="submit">
+        <a href='/AddBusTimeTable'>Add New</a> </button>
        
 
         </div>
