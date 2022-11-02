@@ -69,8 +69,17 @@ const Register = () => {
 
 	return (
 		<div style={{backgroundImage: `url(${reg1})`, marginTop:'-100px', marginBottom:'-100px'}}>
-		<br/>
+			
+		<br/><br/><br/><br/>
+
+		<button onClick={(e)=>ChangeOnClick(e)} className="btn btn-primary" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginTop:'28px'}}>
+		<a href="/"
+		style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+		<i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;</a>
+		</button>
+
 		<div className="register-form">
+
 		<div style={{height:'90px', backgroundColor:"#66CC66"}}>
 		<h1 className="heading"> <b>User Registration Form</b></h1>
 		
@@ -87,7 +96,7 @@ const Register = () => {
             <div >
             <form  style={{backgroundColor:"#ebecf0", textAlign:'left'}} onSubmit={(e) => onSubmit(e)}>
             <br/>
-            <div className="Reg" style={{width:'600px', marginLeft:'10px', marginRight:'10px'}}>
+            <div className="Reg" style={{width:'500px', marginLeft:'10px', marginRight:'10px'}}>
 			
             <label className="form-label"><h4>Name of the User : </h4></label>
 						<input type="text"

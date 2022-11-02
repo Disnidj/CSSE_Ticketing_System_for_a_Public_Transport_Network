@@ -23,23 +23,24 @@ const Navbar = () => {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Home
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
+
                 {/* customer pages */}
+
+                <a
+                  style={{
+                    display: userRole == "customer" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/dashboard"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+
                 <a
                   style={{
                     display: userRole == "customer" ? "flex" : "none",
@@ -57,10 +58,10 @@ const Navbar = () => {
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/FuelSummarry"
+                  href="/"
                   aria-current="page"
                 >
-                  Fuel Summarry
+                  page 3
                 </a>
                 <a
                   style={{
@@ -69,12 +70,25 @@ const Navbar = () => {
                   }}
                   className="sidebarListItem"
                   aria-current="page"
-                  href="/C_ViewTimeTable"
+                  href="/"
                 >
-                  Time Tables
+                  page2
                 </a>
 
                 {/*  admin Pages */}
+
+                <a
+                  style={{
+                    display: userRole == "admin" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/dashboard"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+
                 <a
                   style={{
                     display: userRole == "admin" ? "flex" : "none",
@@ -88,80 +102,80 @@ const Navbar = () => {
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/AddFuel"
+                  href="/"
                   aria-current="page"
                 >
-                  Add Fuel Stock
+                  page1
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/AdminViewSalary"
+                  href="/"
                   aria-current="page"
                 >
-                  Salary Information
+                  pag3
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/Addtimetable"
+                  href="/"
                   aria-current="page"
                 >
-                  Add Time Table
+                  page4
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
-                  href="/AdminLeaveViewAll"
+                  href="/"
                   aria-current="page"
                 >
-                  View Leaves
+                  page5
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   href="/ViewAllRoles"
                   aria-current="page"
                 >
-                  View Roles
+                  Registered Customers
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   aria-current="page"
                   href="/staffRegister"
                 >
-                  Register Employee
+                  Employee Registration
                 </a>
                 <a
                   style={{
-                    display: userRole == "Admin" ? "flex" : "none",
+                    display: userRole == "admin" ? "flex" : "none",
                     textDecoration: "none",
                   }}
                   className="sidebarListItem"
                   aria-current="page"
-                  href="/ViewFuelReport"
+                  href="/"
                 >
-                  Reports
+                  page6
                 </a>
 
                 {/*Employee pages*/}

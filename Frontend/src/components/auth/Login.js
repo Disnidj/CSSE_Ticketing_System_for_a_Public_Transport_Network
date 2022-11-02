@@ -44,6 +44,12 @@ const Login = () => {
 
 	return (
 		<div style={{backgroundImage: `url(${reg1})`}}>
+			<button onClick={(e)=>ChangeOnClick(e)} className="btn btn-primary" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginTop:'28px'}}>
+			<a href="/"
+			style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
+			<i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;</a>
+			</button>
+
 			<center>
 			<br/><br/>
 			<div style={{marginTop:'20px', marginBottom:'-60px', width:'700px', backgroundColor:'lightgrey'}}>
