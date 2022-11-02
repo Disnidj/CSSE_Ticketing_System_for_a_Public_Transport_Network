@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { CreateAdmin } from "../../Services/AuthServices";
 import Swal from 'sweetalert2';
 import { ValidateSignUp } from "./Validation";
-import grp from '../../img/grp.webp';
+import grp from '../../img/grp.jpeg';
 import reg1 from '../../img/grp.jpg';
 
 const RegisterStaff = () => {

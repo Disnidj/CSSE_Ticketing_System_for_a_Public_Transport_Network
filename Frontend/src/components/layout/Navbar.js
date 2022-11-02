@@ -52,28 +52,8 @@ const Navbar = () => {
                 >
                   Reserve Seats For Journeys
                 </a>
-                <a
-                  style={{
-                    display: userRole == "customer" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  page 3
-                </a>
-                <a
-                  style={{
-                    display: userRole == "customer" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  aria-current="page"
-                  href="/"
-                >
-                  page2
-                </a>
+               
+                
 
                 {/*  admin Pages */}
 
@@ -100,50 +80,10 @@ const Navbar = () => {
                 >
                   Pay Station
                 </a>
-                <a
-                  style={{
-                    display: userRole == "admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  page1
-                </a>
-                <a
-                  style={{
-                    display: userRole == "admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  pag3
-                </a>
-                <a
-                  style={{
-                    display: userRole == "admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  page4
-                </a>
-                <a
-                  style={{
-                    display: userRole == "admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  page5
-                </a>
+               
+               
+                
+               
                 <a
                   style={{
                     display: userRole == "admin" ? "flex" : "none",
@@ -153,7 +93,7 @@ const Navbar = () => {
                   href="/ViewAllRoles"
                   aria-current="page"
                 >
-                  Registered Customers
+                  Registered Users
                 </a>
                 <a
                   style={{
@@ -166,17 +106,7 @@ const Navbar = () => {
                 >
                   Employee Registration
                 </a>
-                <a
-                  style={{
-                    display: userRole == "admin" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  aria-current="page"
-                  href="/"
-                >
-                  page6
-                </a>
+                
 
                 {/*Employee pages*/}
                 <a
