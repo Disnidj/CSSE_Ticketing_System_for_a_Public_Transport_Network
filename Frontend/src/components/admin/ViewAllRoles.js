@@ -137,7 +137,7 @@ const Viewallusers = () => {
                         </tbody>
                     </table>
                 </div>
-                {/* <h3>Registered Employees</h3>
+                <h3>Registered Employees</h3>
                 <br/>
                     <table className="table table-striped table-success">
                         <thead>
@@ -171,7 +171,7 @@ const Viewallusers = () => {
                                 </tr>
                             ))}
                         </tbody>
-                    </table> */}
+                    </table>
 			</div>
       
       <br/><br/><br/><br/><br/><br/><br/>
