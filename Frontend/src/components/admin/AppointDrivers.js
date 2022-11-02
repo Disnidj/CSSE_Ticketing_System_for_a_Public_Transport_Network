@@ -96,7 +96,7 @@ function AppointDrivers() {
         console.log("Sending  Details...",newData);
   
 
-        let data= await axios.post('http://localhost:8000/AppointDriver/save',{
+        let data= await axios.post('http://localhost:5000/AppointDriver/save',{
             RouteNo:RouteNo,
             BusNumber:BusNumber,
             DriverID:DriverID,
@@ -139,11 +139,12 @@ function AppointDrivers() {
 
             
               <br/><br/>
-            <table   style={{backgroundColor :'black', marginTop:'-30px'}}>
+              <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-100px'}}>Appoint Drivers</h1>
+            <table   style={{backgroundColor :'black', marginTop:'-10px'}}>
               <tr>
                 <th>
 
-                  <h1 style={{ textAlign:'center',fontSize:"60px", height:'80px', backgroundColor:"#87ceeb", marginTop:'-140px'}}>Appoint Drivers</h1>
+                  
                   <br/><br/>
         
               <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
@@ -200,13 +201,15 @@ function AppointDrivers() {
                             />
                             </div>
                             </td>
+                            </tr>
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             
+                            <tr>
                             <td>
 
-                             <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Driver Name : </label>
                             <input type="text"
                             name="DriverName"
@@ -235,15 +238,16 @@ function AppointDrivers() {
                                 />
                              </div>
                             </td>
+                            </tr>
 
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                           
+                           <tr>
                            
                             <td>
-                             <div className="form-group" style={{marginBottom:'15px', marginLeft:'-250px',color:'white'}}>
+                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
                             <label style={{margineBottom:'5px'}}>  Inspector Name: </label>
                             <input type="text"
                              name="InspectorName"

@@ -50,7 +50,7 @@ const Navbar = () => {
                   aria-current="page"
                   href="/AddTrip"
                 >
-                  Reserve Seats For Journeys
+                  Requests For Season Card
                 </a>
                
                 <a
