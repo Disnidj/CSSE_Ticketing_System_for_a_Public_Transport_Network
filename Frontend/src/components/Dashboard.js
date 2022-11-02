@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import img02 from '../img/admin.jpeg'
+// import img03 from '../img/background3.png'
 
 
 
@@ -9,7 +10,7 @@ import img02 from '../img/admin.jpeg'
 const Dashboard = () => {
 
 	return (
-		<div>
+		<div >
 			<center>
 				<table>
 					<tr>

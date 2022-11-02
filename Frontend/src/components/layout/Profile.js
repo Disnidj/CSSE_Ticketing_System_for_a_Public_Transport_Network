@@ -15,7 +15,7 @@ import moment from "moment";
 import profile from '../../img/user.png'
 
 //import backgroud picture
-import BgAdmin6 from '../../img/background.jpg';
+import BgAdmin6 from '../../img/background.jpeg';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -124,7 +124,7 @@ const Profile = () => {
         <center>
         <Card class="p-3 mb-2 bg-secondary text-white" style={{ marginLeft: "100px", marginRight: "100px" }}>
           <CardHeader>
-            <CardTitle style={{ color: "purple", fontSize: "30px" }}>
+            <CardTitle style={{ color: "#051094", fontSize: "40px", fontWeight:"bold" }}>
               My Profile
             </CardTitle>
           </CardHeader>
