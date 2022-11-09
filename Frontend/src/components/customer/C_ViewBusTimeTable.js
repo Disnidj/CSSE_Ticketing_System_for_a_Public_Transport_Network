@@ -16,7 +16,7 @@ export default class C_ViewBusTimeTable extends Component{
     }
     
     retrieveTimetables(){
-      axios.get("http://localhost:8000/BusTimetables").then(res =>{
+      axios.get("http://localhost:5000/BusTimetables").then(res =>{
         if(res.data.success){
           this.setState({
             bustimetable:res.data.existingBusTimetables
@@ -30,7 +30,7 @@ export default class C_ViewBusTimeTable extends Component{
     
     onDelete = (id) =>{
     
-      axios.delete(`http://localhost:8000/BusTimetables/delete/${id}`).then((res)=>{
+      axios.delete(`http://localhost:5000/BusTimetables/delete/${id}`).then((res)=>{
           this.retrieveTimetables();
             
       })
@@ -49,7 +49,7 @@ export default class C_ViewBusTimeTable extends Component{
     handleSearchArea = (e) =>{
       const searchKey = e.currentTarget.value;
     
-      axios.get("http://localhost:8000/BusTimetables").then(res=>{
+      axios.get("http://localhost:5000/BusTimetables").then(res=>{
         if(res.data.success){
           this.filterData(res.data.existingBusTimetables,searchKey)
         }
