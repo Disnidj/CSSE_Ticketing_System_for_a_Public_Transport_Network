@@ -160,9 +160,9 @@ export default class ViewAllTimeTable extends Component{
 
         <br/>
 
-        <button className= "btn btn-info" style={{marginRight:'0px', marginLeft:'140px', blockSize:'70px', width:'200px'}} type="submit">
+        <button className= "btn btn-light" style={{marginRight:'-700px', marginLeft:'1700px', blockSize:'70px', width:'200px'}} type="submit">
         <a href='/AddBusTimeTable'>Add New</a> </button>
-       
+       <br/>
 
         </div>
          

@@ -2,6 +2,11 @@ import React, { Component } from  'react';
 import axios from 'axios';
 import timeimage from '../../img/timetable1.webp';
 
+
+//import pdf generator
+import jsPdf from 'jspdf'
+import 'jspdf-autotable'
+
 export default class C_ViewBusTimeTable extends Component{
     constructor(props){
       super(props);
@@ -56,6 +61,24 @@ export default class C_ViewBusTimeTable extends Component{
       });
     }
 
+    //pdf generator function
+    jsPdfGenarator = ()=>{
+      var doc = new jsPdf('p','pt');
+
+      doc.text(210,30,"TimeTable List")
+      doc.autoTable({html:'#pdf'})
+
+      doc.autoTable({
+        columnStyles:{europe:{halign:'center'}},
+        margin:{top:10},
+      })
+
+
+    doc.save("TimeTable.pdf");
+
+
+    }
+
     
 
     
@@ -100,7 +123,7 @@ export default class C_ViewBusTimeTable extends Component{
        
             <br/>
             <center>
-            <table className = "table table-striped" style={{width:'1800px',height:'300px'}}>
+            <table className = "table table-striped" id="pdf" style={{width:'1800px',height:'300px'}}>
                  <thead style={{backgroundColor:'black'}}>
                     <tr>
                     <th style={{color:'white'}} scope = "col"></th>  
@@ -143,8 +166,13 @@ export default class C_ViewBusTimeTable extends Component{
 
         </center>
 
-        <br/>
+        <br/><br/><br/>
        
+       <button className="btn btn-primary" onClick={this.jsPdfGenarator} style={{ fontSize:'17px',
+                              marginLeft:'900px', width:'300px', height:'80px'}} >
+                              <i class="fa-solid fa-download"></i>&nbsp;download Table
+       </button>
+            <br/><br/>
 
         </div>
          

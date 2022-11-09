@@ -121,6 +121,8 @@ function AppointDrivers() {
 
   }
 
+ 
+
 
   
         
@@ -149,7 +151,7 @@ function AppointDrivers() {
         
               <form style={{marginLeft:'30px', marginRight:'200px', marginTop:'-40px'}}>
            
-              <br/>
+              <br/><br/>
                 <table>
                   <thead>
                     <tr>
@@ -186,7 +188,7 @@ function AppointDrivers() {
                             />
                             </div>
                             </tr>
-                          
+                          <br/>
                            <tr>
                           <td>
                             <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
@@ -270,13 +272,13 @@ function AppointDrivers() {
                          </tr>
                         </tbody>
                          </table> 
-                         <br/>
+                         <br/><br/>
                       
                      
 
                          <button className= "btn btn-primary" style={{marginRight:'0px', marginLeft:'200px', blockSize:'70px', width:'200px'}} type="submit" onClick={handleSubmit}>
                          Send Details </button>
-                      
+                         <br/><br/>
                          </form> 
                          </th>
                          <th>
