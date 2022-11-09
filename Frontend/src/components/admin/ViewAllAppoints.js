@@ -157,7 +157,7 @@ export default class ViewAllAppoints extends Component{
         <br/>
 
         
-        <button className= "btn btn-info" style={{marginRight:'0px', marginLeft:'140px', blockSize:'70px', width:'200px'}} type="submit">
+        <button className= "btn btn-light" style={{marginRight:'-1400px', marginLeft:'190px', blockSize:'70px', width:'200px'}} type="submit">
         <a href='/AppointDrivers'>Add New</a> </button>
 
         </center>

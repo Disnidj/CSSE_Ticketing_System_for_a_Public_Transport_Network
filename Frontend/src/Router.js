@@ -41,7 +41,7 @@ import C_ViewBusTimeTable from './components/customer/C_ViewBusTimeTable';
 //employee
 import RegisterStaff from "./components/auth/RegisterStaff";
 import D_ViewAllAppoints from './components/employee/D_ViewAllAppoints'; 
-
+import MarkAvailability from './components/employee/MarkAvailability';
 
 
 export default function Router() {
@@ -58,7 +58,9 @@ export default function Router() {
 
           {/* employee */}
 
-          <Route exact path="/staffRegister" element={<RegisterStaff />} />
+          <Route exact path="/staffRegister" element={<RegisterStaff />} /> 
+          <Route exact path="/MarkAvailability" element={<MarkAvailability />} /> 
+          <Route    path = "/D_ViewAllAppoints" element = {<D_ViewAllAppoints/>}/> 
 
         
           <Route path="/viewAll" element={<ViewAll/>} />
@@ -73,12 +75,11 @@ export default function Router() {
 
               <Route    path = "/AddBusTimeTable" element = {<AddBusTimeTable/>}/>    
               <Route    path = "/ViewAllTimeTable" element = {<ViewAllTimeTable/>}/>    
-              <Route    path = "/UpdateBusTimeTable/:id" element = {<UpdateBusTimeTable/>}/> 
-              <Route    path = "/C_ViewBusTimeTable" element = {<C_ViewBusTimeTable/>}/>   
+              <Route    path = "/UpdateBusTimeTable/:id" element = {<UpdateBusTimeTable/>}/>   
               <Route    path = "/AppointDrivers" element = {<AppointDrivers/>}/>  
               <Route    path = "/ViewAllAppoints" element = {<ViewAllAppoints/>}/>  
-              <Route    path = "/D_ViewAllAppoints" element = {<D_ViewAllAppoints/>}/>  
               <Route    path = "/UpdateDriverAppoints/:id" element = {<UpdateDriverAppoints/>}/> 
+              <Route    path = "/C_ViewBusTimeTable" element = {<C_ViewBusTimeTable/>}/> 
            
 
           
