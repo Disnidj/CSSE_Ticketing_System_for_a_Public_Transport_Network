@@ -271,7 +271,9 @@ function AddBusTimeTable() {
                  
                         </tbody>
                          </table> 
+                         <br/> <br/>
                          <br/>
+                      
                       
                      
 
@@ -279,15 +281,15 @@ function AddBusTimeTable() {
                          Send Details </button>
                       
                          </form> 
-                         <br/> <br/>
+                         <br/> <br/>  <br/> <br/> <br/> 
                          </th>
                          <th>
                          <img src={timetableImage} alt="timetableImage" height={950} width={1260}/>
                          </th>
                          </tr>
-                      
+                       
                          </table>
-                      
+                       
            
                       
                     
