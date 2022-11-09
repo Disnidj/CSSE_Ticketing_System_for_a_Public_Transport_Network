@@ -331,9 +331,9 @@ function AddTrip() {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <button onClick={(e)=>ChangeOnClick(e)} className="btn btn-primary" style={{padding:'9px 9px',backgroundColor:'#3895d3', marginLeft:'10px', marginTop:'28px'}}>
-                            <a href="#"
+                            <a href="/viewAll"
                             style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'17px'}}> 
-                            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;</a>
+                            <i class="far fa-arrow-alt-circle-left"></i>&nbsp;&nbsp;&nbsp;View Ticket&nbsp;&nbsp;</a>
                             </button>
 
 

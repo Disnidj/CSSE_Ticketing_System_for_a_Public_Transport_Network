@@ -80,7 +80,7 @@ const Viewallusers = () => {
 	return (
 		
             
-             <div style={{ marginTop: '0px',   backgroundSize: 'cover'}}>                  
+             <div style={{ marginTop: '0px',   backgroundSize: 'cover',backgroundColor:"#daf0ff"}}>                  
               <div style={{ textAlign: "center" }}>
             </div>
            
@@ -89,20 +89,19 @@ const Viewallusers = () => {
                
                 <div >
                     <center >
-                        {/* <b style={{fontSize:"48px" , textDecoration:"underline"}}>User Details</b><br/><br/> */}
-                                <div style={{height:'80px', backgroundColor:"#90A4AE", marginTop:'-20px'}}>
-                                <br/><br/>
+                        
+                                <div >
 
-                                <h1 style={{color:'#Black', textAlign:'center',fontSize:"60px"}}>User Details</h1>
+                                <h1 style={{color:'#1338be', textAlign:'center',fontSize:"80px"}}><u>User Details</u></h1>
                                 
-                                <div style={{height:'80px', backgroundColor:"#CFD8DC", marginTop:'-50px'}}></div>
+                                
                                 </div>
                     </center>
                   
                     <br/><br/><br/><br/>
                     
                     <h3>Registered Customers</h3>
-                    <table className="table table-striped table-success">
+                    <table className="table" style={{backgroundColor:"#80dfff"}}>
                         <thead>
                             <tr >
                             <th>No</th>
@@ -139,13 +138,14 @@ const Viewallusers = () => {
                 </div>
                 <h3>Registered Employees</h3>
                 <br/>
-                    <table className="table table-striped table-success">
+                    <table className="table"  style={{backgroundColor:"#5ced73"}}>
                         <thead>
                             <tr>
                             <th>No</th>
                             <th>FullName</th>
                             <th>Email Address</th>
                             <th>Contact Number</th>
+                            <th>NIC</th>
                             <th>User Type</th>
                             <th>Delete user</th>
                           
@@ -158,6 +158,7 @@ const Viewallusers = () => {
                                     <td>{employees?.name}</td>
                                     <td>{employees?.email}</td>
                                     <td>{employees?.mobileno}</td>
+                                    <td>{employees?.NIC}</td>
                                     <td>{employees?.userRole}</td>
 
 
