@@ -8,7 +8,7 @@ import axios from 'axios';
 import{useParams} from "react-router-dom";
 
 //import backgroud picture
-import BgAdmin2 from '../../img/background.jpg';
+//import BgAdmin2 from '../../img/background.jpg';
 
 //import pdf generator
 import jsPdf from 'jspdf'
