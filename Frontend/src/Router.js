@@ -59,7 +59,7 @@ export default function Router() {
           {/* employee */}
 
           <Route exact path="/staffRegister" element={<RegisterStaff />} /> 
-          <Route exact path="/MarkAvailability" element={<MarkAvailability />} /> 
+          <Route exact path="/MarkAvailability/:id" element={<MarkAvailability />} /> 
           <Route    path = "/D_ViewAllAppoints" element = {<D_ViewAllAppoints/>}/> 
 
         

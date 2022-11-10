@@ -30,6 +30,11 @@ const DriversSchema = new mongoose.Schema({
     InspectorName:{
     type:String,
     required:true
+    },
+
+    Availability:{
+    type:String,
+    required:true
     }
 
    
