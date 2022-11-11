@@ -22,7 +22,7 @@ function AppointDrivers() {
   const [DriverName, setDriverName]=useState("");
   const [InspectorID, setInspectorID]=useState("");
   const [InspectorName, setInspectorName]=useState("");
-  
+  const [Availability, setAvailability]=useState("");
 
 
    
@@ -64,6 +64,12 @@ function AppointDrivers() {
       
     }
 
+    const HandleAvailability = (e)=>{
+      e.preventDefault();
+      setAvailability(e.target.value);
+      
+    }
+
 
     
     const handleInputChange = () => {
@@ -72,14 +78,15 @@ function AppointDrivers() {
       setDriverID("");
       setDriverName("");
       setInspectorID("");
-      setInspectorName("");
+      setInspectorName(""); 
+      setAvailability(""); 
       
     }; 
 
     const handleSubmit = async (e)=>{
       e.preventDefault();
   
-      if(RouteNo===''|| BusNumber===''|| DriverID===''||DriverName===''|| InspectorID===''|| InspectorName===''){
+      if(RouteNo===''|| BusNumber===''|| DriverID===''||DriverName===''|| InspectorID===''|| InspectorName==='' || Availability===''){
         alert("Fill All The Details!!")
   
       }else {
@@ -90,7 +97,8 @@ function AppointDrivers() {
           DriverID:DriverID,
           DriverName:DriverName,
           InspectorID:InspectorID,
-          InspectorName:InspectorName
+          InspectorName:InspectorName,
+          Availability:Availability
         }
   
         console.log("Sending  Details...",newData);
@@ -102,7 +110,8 @@ function AppointDrivers() {
             DriverID:DriverID,
             DriverName:DriverName,
             InspectorID:InspectorID,
-            InspectorName:InspectorName
+            InspectorName:InspectorName,
+            Availability:Availability
         });
 
         console.log("Saved Data : ",data);
@@ -261,15 +270,30 @@ function AppointDrivers() {
                                 />
                              </div>
                              </td>
-                        
-                           
-                            
-                            
-
-                           
-                            
-                            
                          </tr>
+
+                         <tr>
+                           
+                           <td>
+                           <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
+                              <label className="form-label" > Driver Availability :</label>
+                              <input type="text"
+                              list="type"
+                              name="Availability"
+                              className="form-control"
+                              placeholder="Select Driver Availability state"              
+                              value={Availability} 
+                              onChange={(e) => HandleAvailability(e)}
+                             />
+                              <datalist id="type">
+                                <option value="Undefined"></option>
+                                <option value="Confirmed"></option>
+                             
+                              </datalist>
+                          
+                         </div>
+                            </td>
+                        </tr>
                         </tbody>
                          </table> 
                          <br/><br/>

@@ -17,6 +17,7 @@ function UpdateDriverAppoints() {
   const [DriverName, setDriverName]=useState("");
   const [InspectorID, setInspectorID]=useState("");
   const [InspectorName, setInspectorName]=useState("");
+  const [Availability, setAvailability]=useState("");
   
   const id = useParams();
 
@@ -28,7 +29,8 @@ function UpdateDriverAppoints() {
     DriverID:"",
     DriverName:"",
     InspectorID:"",
-    InspectorName:""
+    InspectorName:"",
+    Availability:""
    
  })
    
@@ -45,7 +47,8 @@ const ChangeOnClick = async(e)=>{
     formData.append("DriverID",DriverID);
     formData.append("DriverName",DriverName);
     formData.append("InspectorID",InspectorID);
-    formData.append("InspectorName",InspectorName);
+    formData.append("InspectorName",InspectorName); 
+    formData.append("Availability",Availability);  
    
 
     setRouteNo("")
@@ -54,6 +57,7 @@ const ChangeOnClick = async(e)=>{
     setDriverName("");
     setInspectorID("");
     setInspectorName("");
+    setAvailability("");
   
    
 console.log(formData.get('RouteNo'));
@@ -65,6 +69,7 @@ appointdriver.DriverID=formData.get('DriverID');
 appointdriver.DriverName=formData.get('DriverName');
 appointdriver.InspectorID=formData.get('InspectorID');
 appointdriver.InspectorName=formData.get('InspectorName');
+appointdriver.Availability=formData.get('Availability');
 
 
 
@@ -100,8 +105,8 @@ useEffect(function effectFunction() {
     setDriverID(res.data.appointdriver.DriverID)
     setDriverName(res.data.appointdriver.DriverName)
     setInspectorID(res.data.appointdriver.InspectorID)
-    setInspectorName(res.data.appointdriver.InspectorName)
-    
+    setInspectorName(res.data.appointdriver.InspectorName)   
+    setAvailability(res.data.appointdriver.Availability)
    
   }).catch(err => console.log(err));
 
@@ -247,14 +252,28 @@ useEffect(function effectFunction() {
                             />
                          </div>
                          </td>
-                    
-                       
                         
-                        
+                     </tr>
+                      <br/><br/>
+                     <tr>
 
-                       
-                        
-                        
+                     <div className="form-group" style={{marginBottom:'15px',color:'white'}}>
+                              <label className="form-label" > Driver Availability :</label>
+                              <input type="text"
+                              list="type"
+                              name="Availability"
+                              className="form-control"
+                              placeholder="Select Driver Availability state"              
+                              value={Availability} 
+                              onChange={e => setAvailability(e.target.value)}
+                             />
+                              <datalist id="type">
+                                <option value="Undefined"></option>
+                                <option value="Confirmed"></option>
+                             
+                              </datalist>
+                          
+                         </div>
                      </tr>
                     </tbody>
                      </table> 

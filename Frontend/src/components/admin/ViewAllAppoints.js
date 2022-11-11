@@ -106,6 +106,7 @@ export default class ViewAllAppoints extends Component{
                     <th style={{color:'white'}} scope = "col">Driver Name</th>  
                     <th style={{color:'white'}} scope = "col">Inspector ID</th> 
                     <th style={{color:'white'}} scope = "col">Inspector Name</th>
+                    <th style={{color:'white'}} scope = "col">Driver Availability</th>
                     <th style={{color:'white'}} scope = "col"></th>
 
                    
@@ -122,6 +123,7 @@ export default class ViewAllAppoints extends Component{
                   <td>{appointdriver.DriverName}</td>  
                   <td>{appointdriver.InspectorID}</td> 
                   <td>{appointdriver.InspectorName}  </td> 
+                  <td>{appointdriver.Availability}  </td> 
                 
                  
                
