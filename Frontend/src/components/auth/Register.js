@@ -24,6 +24,7 @@ const Register = () => {
 
 	const onChange = (e) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
+		
 
 	const onSubmit = async (e) => {
 
@@ -102,6 +103,8 @@ const Register = () => {
 						<input type="text"
 						class="form-control"
 						placeholder="Full Name"
+						pattern="[a-zA-Z]*"
+						title="Cannot have numerical values"
 						name="name"
 						value={name}
 						onChange={(e) => onChange(e)} 
@@ -117,6 +120,7 @@ const Register = () => {
 						placeholder="Email Address - abc@gmail.com"
 						name="email"
 						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+						title="Email type is wrong!"
 						value={email}
 						onChange={(e) => onChange(e)} 
                 
@@ -160,6 +164,7 @@ const Register = () => {
 						class="form-control"
 						placeholder="Mobile no"
 						name="mobileno"
+						maxLength="12"
 						value={mobileno}
 						onChange={(e) => onChange(e)}  
                 
@@ -173,6 +178,7 @@ const Register = () => {
 						class="form-control"
 						placeholder="NIC"
 						name="NIC"
+						maxLength="12"
 						value={NIC}
 						onChange={(e) => onChange(e)}
                 

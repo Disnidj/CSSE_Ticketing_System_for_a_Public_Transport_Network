@@ -85,6 +85,8 @@ const RegisterStaff = () => {
 						class="form-control"
 						placeholder="Full Name"
 						name="name"
+						pattern="[a-zA-Z]*"
+						title="Cannot have numerical values"
 						value={name}
 						onChange={(e) => onChange(e)} 
                 
@@ -99,6 +101,7 @@ const RegisterStaff = () => {
 						placeholder="Email Address - abc@gmail.com"
 						name="email"
 						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+						title="Email type is wrong!"
 						value={email}
 						onChange={(e) => onChange(e)} 
                 
@@ -140,7 +143,7 @@ const RegisterStaff = () => {
             <label className="form-label"><h4>Contact Number : </h4></label>
                 <input type="text"
 						class="form-control"
-						maxLength={12}
+						maxLength="12"
 						placeholder="Mobile no"
 						name="mobileno"
 						value={mobileno}
@@ -156,6 +159,7 @@ const RegisterStaff = () => {
 						class="form-control"
 						placeholder="NIC"
 						name="NIC"
+						maxLength="12"
 						value={NIC}
 						onChange={(e) => onChange(e)}
                 
