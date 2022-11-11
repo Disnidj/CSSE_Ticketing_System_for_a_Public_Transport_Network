@@ -1,6 +1,7 @@
 import React from "react";
 import {useState ,useEffect }from 'react'
 import { Link , useNavigate } from "react-router-dom";
+
 import { GetallUsers, DeleteAdmin } from "../../Services/AuthServices";
 import Swal from "sweetalert2";
 
@@ -15,6 +16,11 @@ const Viewallusers = () => {
     //   localStorage.removeItem("userRole");
     //   navigate("/Login");
     // }
+
+    
+
+
+
 
 	const [customers , setcustomers] = useState([])
   
@@ -101,6 +107,8 @@ const Viewallusers = () => {
                     <br/><br/><br/><br/>
                     
                     <h3>Registered Customers</h3>
+
+
                     <table className="table" style={{backgroundColor:"#80dfff"}}>
                         <thead>
                             <tr >
