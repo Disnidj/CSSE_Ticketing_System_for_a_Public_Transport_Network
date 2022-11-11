@@ -30,6 +30,7 @@ import ViewAll from "./components/customer/ViewAll";
 import GetOne from "./components/customer/ViewOne"
 
 import C_ViewBusTimeTable from './components/customer/C_ViewBusTimeTable'; 
+import Recharge from "./components/customer/Recharge";
 
 
 
@@ -80,6 +81,8 @@ export default function Router() {
               <Route    path = "/ViewAllAppoints" element = {<ViewAllAppoints/>}/>  
               <Route    path = "/UpdateDriverAppoints/:id" element = {<UpdateDriverAppoints/>}/> 
               <Route    path = "/C_ViewBusTimeTable" element = {<C_ViewBusTimeTable/>}/> 
+              <Route    path="/recharge" element={<Recharge/>}/>
+         
            
 
           

@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
 
-                {/* customer pages */}
+                {/* customer pages */} 
 
                 <a
                   style={{
@@ -63,6 +63,18 @@ const Navbar = () => {
                   href="/C_ViewBusTimeTable"
                 >
                   Time Tables
+                </a>
+
+                <a
+                  style={{
+                    display: userRole == "customer" ? "flex" : "none",
+                    textDecoration: "none",
+                  }}
+                  className="sidebarListItem"
+                  href="/recharge"
+                  aria-current="page"
+                >
+                  Recharge
                 </a>
                 
 
