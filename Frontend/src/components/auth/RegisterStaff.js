@@ -113,7 +113,8 @@ const RegisterStaff = () => {
             <label className="form-label"><h4>Create a Password : </h4></label>
                 <input type="password"
 						class="form-control"
-						placeholder="Password - should be atleast 4 characters "
+						placeholder="Password - should be atleast 6 characters "
+						title="Password is not strong enough"
 						name="password"
 						minLength="6"
 						value={password}
@@ -131,6 +132,7 @@ const RegisterStaff = () => {
 						class="form-control"
 						placeholder="Confirm Password"
 						name="password2"
+						title="Password is not strong enough"
 						minLength="6"
 						value={password2}
 						onChange={(e) => onChange(e)} 
