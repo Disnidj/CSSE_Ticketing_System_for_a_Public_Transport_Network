@@ -131,7 +131,7 @@ function AddTrip() {
       else{
     
         alert("Saving data............")
-        navigate('/')
+        navigate('/dashboard')
       }
 
     }
@@ -270,7 +270,7 @@ function AddTrip() {
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;
                             
-                            <label  style={{ color:'white',marginBottom: '10px'}}>Date of Journey :</label><br />
+                            <label  style={{ color:'white',marginBottom: '10px'}}>Date:</label><br />
                             
                             <br/>
                             <input 
@@ -290,7 +290,7 @@ function AddTrip() {
                         <td>
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         <br/>
-                        <label  style={{ color:'white',marginBottom: '15px', width:'300px', marginTop:'5px', marginRight:'20px', marginBottom:'0px', marginLeft:'-10px' }}>Time of Journey :</label><br />
+                        <label  style={{ color:'white',marginBottom: '15px', width:'300px', marginTop:'5px', marginRight:'20px', marginBottom:'0px', marginLeft:'-10px' }}>Time:</label><br />
                             
                             <br/>
                             <input 
